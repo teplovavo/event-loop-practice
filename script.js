@@ -84,3 +84,5 @@ const displayPrimes = (n, current = 2) => {
       setTimeout(() => displayPrimes(n, current + 1), 0);
     };
     
+
+    displayPrimes(10000);
