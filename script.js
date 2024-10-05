@@ -50,3 +50,6 @@ const trampoline = (fn, ...args) => {
     return result;
   };
 
+// Example usage
+const nestedArray = [1, [2, [3, [4]]]];
+console.log(trampoline(flattenArray, nestedArray)); // array: [1, 2, 3, 4]
