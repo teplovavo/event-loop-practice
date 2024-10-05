@@ -53,3 +53,19 @@ const trampoline = (fn, ...args) => {
 // Example usage
 const nestedArray = [1, [2, [3, [4]]]];
 console.log(trampoline(flattenArray, nestedArray)); // array: [1, 2, 3, 4]
+
+
+
+//////////////////////////////////////////////////////////////////////////
+ console.log("Part 3: Deferred Execution");
+
+ // Cache an HTML element to show results
+const outputElement = document.getElementById('output');
+
+// Function to check if a number is prime
+const isPrime = (num) => {
+  for (let i = 2, sqrt = Math.sqrt(num); i <= sqrt; i++) {
+    if (num % i === 0) return false;
+  }
+  return num > 1;
+};
