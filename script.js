@@ -69,3 +69,10 @@ const isPrime = (num) => {
   }
   return num > 1;
 };
+
+//  to calculate and display primes between 1 and n
+const displayPrimes = (n, current = 2) => {
+    if (current > n) {
+      alert('Finished calculating primes'); // Alert when done
+      return;
+    }
