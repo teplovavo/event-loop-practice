@@ -76,3 +76,11 @@ const displayPrimes = (n, current = 2) => {
       alert('Finished calculating primes'); // Alert when done
       return;
     }
+    if (isPrime(current)) {
+        outputElement.innerHTML += `${current} `; // Add prime number to the output
+      }
+    
+      // Use setTimeout to defer the next iteration so the browser can render
+      setTimeout(() => displayPrimes(n, current + 1), 0);
+    };
+    
