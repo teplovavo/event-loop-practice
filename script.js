@@ -41,6 +41,12 @@ const flattenArray = (arr, result = []) => {
     return result;
   };
 
+// Trampoline function to handle recursive calls without blowing up the stack
+const trampoline = (fn, ...args) => {
+    let result = fn(...args); 
+    while (typeof result === "function") {
+      result = result(); // Keep invoking the returned function until we have the final result
+    }
+    return result;
+  };
 
-
-  
