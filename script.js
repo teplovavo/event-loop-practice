@@ -28,3 +28,19 @@ try {
 
   //////////////////////////////////////////////////////////////////////////
 console.log("Part 2: Trampolines");
+
+// Recursive function to flatten an array of nested arrays
+const flattenArray = (arr, result = []) => {
+    for (let i = 0; i < arr.length; i++) {
+      if (Array.isArray(arr[i])) {
+        return () => flattenArray(arr[i], result); // Return function for trampolining
+      } else {
+        result.push(arr[i]); // Push the non-array element to the result
+      }
+    }
+    return result;
+  };
+
+
+
+  
